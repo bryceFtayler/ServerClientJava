@@ -19,7 +19,7 @@ public class SimpleServer {
             serverMessage("Attempting Server Start...");
             server = new ServerSocket(PORT);
 
-            serverMessage("-----------------\nSUCCESSFUL START!\n-----------------");
+            serverMessage("-----------------\n\tSUCCESSFUL START!\n\t-----------------");
 
         } catch (Exception e) {
             serverError("FAILED TO START SERVER!");
@@ -103,7 +103,7 @@ public class SimpleServer {
      * @param message - Server message.
      */
     private void serverMessage(String message) {
-        System.out.println("[SERVER MESSAGE]\t: \"+ message +\"");
+        System.out.println("[SERVER MESSAGE]:\n\t"+ message);
     }
 
     /**
@@ -112,7 +112,7 @@ public class SimpleServer {
      * @param message - Error message.
      */
     private void serverError(String message) {
-        System.err.println("[SERVER ERROR]\t: \"+ message +\"\n");
+        System.err.println("[SERVER ERROR]:\n\t\""+ message);
     }
 
     public static void main(String[] args) {

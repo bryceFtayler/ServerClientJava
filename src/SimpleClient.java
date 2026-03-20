@@ -20,7 +20,7 @@ public class SimpleClient {
      */
     public SimpleClient() {
         clientMessage(
-                "Client started!\n Attempting to connect to server on:\nIP = \"localhost\"\nPORT = " + PORT + "\n");
+                "Client started!\n\tAttempting to connect to server on:\n\tIP = \"localhost\"\n\tPORT = " + PORT + "\n");
         try {
             socket = new Socket("localhost", PORT);
 
@@ -35,7 +35,7 @@ public class SimpleClient {
             System.exit(0);
         }
 
-        clientMessage("-------------------------\nSUCCESSFULLY CONNECTED TO SERVER\n-------------------------");
+        clientMessage("-------------------------\n\tSUCCESSFULLY CONNECTED TO SERVER\n\t-------------------------");
 
         // Begin writing to server
         writeMessages();
@@ -94,7 +94,7 @@ public class SimpleClient {
      * @param message - Server message.
      */
     private void clientMessage(String message) {
-        System.out.println("[CLIENT MESSAGE]\t: \"+ message +\"");
+        System.out.println("[CLIENT MESSAGE]:\n\t"+ message);
     }
 
     /**
@@ -103,7 +103,7 @@ public class SimpleClient {
      * @param message - Error message.
      */
     private void clientError(String message) {
-        System.err.println("[CLIENT ERROR]\t: \"+ message +\"\n");
+        System.err.println("[CLIENT ERROR]:\n\t"+ message);
     }
 
     public static void main(String[] args) {
