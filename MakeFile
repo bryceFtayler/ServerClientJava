@@ -1,0 +1,18 @@
+compile: bin
+	javac -d ./bin/ ./src/*.java
+
+# Run as client
+simpleclient: compile
+	java -cp ./bin SimpleClient
+
+# Run as server
+simpleserver: compile
+	java -cp ./bin SimpleServer
+
+# Create a bin folder for the class files
+bin: clean
+	mkdir bin
+
+# Clean the bin folder
+clean:
+	if exist bin rmdir /s /q bin
