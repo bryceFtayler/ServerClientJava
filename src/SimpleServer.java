@@ -67,6 +67,8 @@ public class SimpleServer {
      * Close the server.
      */
     private void close() {
+
+        serverMessage("Client disconnected! Closing server...");
         try {
             in.close();
             server.close();
@@ -76,6 +78,8 @@ public class SimpleServer {
             serverError("Failed closing server!\n");
             e.printStackTrace();
         }
+
+        serverMessage("Server Closed!");
     }
 
     /**
@@ -89,7 +93,7 @@ public class SimpleServer {
             while (!line.equals(STOP_STRING)) {
 
                 line = in.readUTF();
-                System.out.println(line);
+                System.out.println("Client: " + line);
             }
 
         } catch (Exception e) {
