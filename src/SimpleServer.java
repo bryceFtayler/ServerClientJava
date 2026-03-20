@@ -6,7 +6,7 @@ import java.net.*;
  * 
  * @author Bryce Tayler
  */
-public class Server {
+public class SimpleServer {
     private ServerSocket server;
     private DataInputStream in;
     private DataOutputStream out;
@@ -14,7 +14,7 @@ public class Server {
     private static final String STOP_STRING = "##";
     // private String serverLog;
 
-    public Server() {
+    public SimpleServer() {
         try {
             serverMessage("Attempting Server Start...");
             server = new ServerSocket(PORT);

@@ -3,7 +3,7 @@
  * 
  * @author Bryce Tayler
  */
-public class Client {
+public class SimpleClient {
 
     public static void main(String[] args) {
         
